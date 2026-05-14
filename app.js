@@ -5,7 +5,7 @@ import { GoogleGenAI } from "@google/genai";
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // The API key stays on the server so it is not visible in browser JavaScript.
 const ai = new GoogleGenAI({
